@@ -1,6 +1,12 @@
-body {
+@import url(https://fonts.google.com/share?selection.family=Berkshire%20Swash%7CCrete%20Round%7CPoppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300%7CRoboto:wght@100;300;700);
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +16,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
 }
