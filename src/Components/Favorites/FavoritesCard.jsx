@@ -4,18 +4,16 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import './ProductCard.css'
 import EditIcon from '@mui/icons-material/Edit';
 import { Link } from 'react-router-dom';
 import { IconButton, createTheme, ThemeProvider } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { productContext } from '../../../Contexts/ProductsContext';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { productContext } from '../../Contexts/ProductsContext';
 
 
-export default function ProductCard({item}) { 
-    const { deleteProduct, addProductInCart, checkProductInCart, addProductInFavorites, checkProductInFavorites, useAuth } = React.useContext(productContext)
+export default function FavoritesCard({item}) { 
+    const { deleteFromFavorites, addProductInCart, checkProductInCart } = React.useContext(productContext)
 
     const customTheme = createTheme({
         palette: {
@@ -30,65 +28,47 @@ export default function ProductCard({item}) {
           }
         }
       });
-      const currentUser = useAuth()
-
-
-    
+    let data = item.item
     let icons = (
         <CardActions disableSpacing>
-
-            {currentUser?.email === 'amoursez@gmail.com' ? (
-            <Link to={`/edit/${item.id}`}>
-                <IconButton>
-                    <EditIcon/>
-                </IconButton>
-            </Link>) : (null)}
-
-            {currentUser?.email === 'amoursez@gmail.com' ? (
-            <IconButton onClick={() => deleteProduct(item.id)}>
-                <DeleteIcon/>
-            </IconButton>) 
-            : (null)}
-            
-            {currentUser? (
-            <IconButton 
-                aria-label='share' 
-                onClick={() => addProductInFavorites(item)} 
-                color={checkProductInFavorites(item.id) ? 'warning': 'secondary'}>
+            <IconButton onClick={() => deleteFromFavorites(data.id)}>
                 <FavoriteIcon/>
             </IconButton>
-            ) : (null)}
-            {currentUser? (
             <IconButton 
                 aria-label='share' 
-                onClick={() => addProductInCart(item)} 
-                color={checkProductInCart(item.id) ? 'warning': 'secondary'}>
+                onClick={() => addProductInCart(data)} 
+                color={checkProductInCart(data.id) ? 'warning': 'secondary'}>
                 <ShoppingCartIcon/>
             </IconButton>
-            ) : (null)}
-        </CardActions> 
-    ) 
+        </CardActions>
+    )
+
+    
   return (
     <ThemeProvider theme={customTheme}>
-        <Card sx={{ maxWidth: 700 }}>
-            <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
+        <Card sx={{ maxWidth: 420 }}>
+            <Link to={`/detail/${data.id}`} style={{textDecoration: 'none', color: 'black'}}>
                 <CardContent>
                     <Typography gutterBottom variant="h6" component="div">
-                    {item.name}
+                    {data.name}
                     </Typography>
-            
+                    <Typography gutterBottom variant="p" component="div" sx={{ fontWeight: 'bold'}}>
+                    {data.artist}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                    {data.year}
+                    </Typography>
                 </CardContent>
                 <CardMedia
                     component="img"
                     alt="item image"
                     height="300"
-                    image={item.image}
+                    image={data.image}
                     className='cardImg'
                 />
             </Link>
-
         <CardContent>
-            <Typography size="small">$ {item.price}</Typography>
+            <Typography size="small">$ {data.price}</Typography>
         </CardContent>
         {icons}
         </Card>

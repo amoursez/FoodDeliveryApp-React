@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import { API } from '../Helpers/Constants'
 import { calcSubPrice, calcTotalPrice } from '../Helpers/CalcPrice';
-/* import { auth } from '../Firebase'; */
+import { auth } from '../Firebase';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 
 export const productContext = createContext()
@@ -291,20 +291,7 @@ const ProductsContextProvider = ({ children }) => {
         })
     }
 
-    // const changeFavouriteProductCount = (count, id) => {
-    //     let favorites = JSON.parse(localStorage.getItem('favorites'))
-    //     favorites.products = favorites.products.map(elem => {
-    //         if(elem.item.id === id){
-    //             elem.count = count
-    //             elem.subPrice = calcSubPrice(elem)
-    //         }
-    //         return elem
-    //     })
-    //     favorites.totalPrice = calcTotalPrice(favorites.products)
-    //     localStorage.setItem('favorites', JSON.stringify(favorites))
-    //     getFavorites()
-    // }
-
+  
     const checkProductInFavorites = (id) => {
         let favorites = JSON.parse(localStorage.getItem('favorites'))
         if(!favorites){
@@ -337,7 +324,7 @@ const ProductsContextProvider = ({ children }) => {
 
 
     //! SignIn / SignUP
-    /* function signUp(email, password) {
+    function signUp(email, password) {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
@@ -361,7 +348,7 @@ const ProductsContextProvider = ({ children }) => {
         return signOut(auth)
     }
 
- */
+
     return (
         
         <productContext.Provider value={{
@@ -385,10 +372,10 @@ const ProductsContextProvider = ({ children }) => {
             changeProductCount,
             checkProductInCart,
             deleteFromCart,
-           /*  signUp,
+            signUp,
             signIn,
             useAuth,
-            logout, */
+            logout,
             addProductInFavorites,
             getFavoritesLength,
             checkProductInFavorites,
