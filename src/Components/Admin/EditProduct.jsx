@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { Button, IconButton, TextField } from '@mui/material';
-import { productContext } from '../../../Contexts/ProductsContexts';
+import { productContext } from '../../Contexts/ProductsContext';
 import { Link, useParams } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
 
@@ -13,13 +13,10 @@ export default function EditProduct() {
 
     const [values, setValues] = React.useState({
         name: '',
-        artist: '',
-        year: '',
         image: '',
         price: '',
         description: '',
-        tracklist: '',
-        genre: ''
+        category: ''
     })
 
     React.useEffect(() => {
@@ -97,13 +94,11 @@ export default function EditProduct() {
                                 justifyContent: 'center'
                             }}>
                             <TextField name='name' multiline onChange={handleEditInp} value={values.name} variant='outlined' label='Name' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                            <TextField name='artist' multiline onChange={handleEditInp} value={values.artist} variant='outlined' label='Artist' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                            <TextField name='year' onChange={handleEditInp} value={values.year} variant='outlined' label='Year' style={{padding: '10px', width: '20em'}} color="secondary"/>
+                           
                             <TextField name='image' multiline onChange={handleEditInp} value={values.image} variant='outlined' label='Image' style={{padding: '10px', width: '20em'}} color="secondary"/>
                             <TextField name='price' onChange={handleEditInp} value={values.price} variant='outlined' label='Price' style={{padding: '10px', width: '20em'}} color="secondary"/>
                             <TextField name='description' multiline onChange={handleEditInp} value={values.description} variant='outlined' label='Description' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                            <TextField name='tracklist' multiline onChange={handleEditInp} value={values.tracklist} variant='outlined' label='Tracklist' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                            <TextField name='genre' multiline onChange={handleEditInp} value={values.genre} variant='outlined' label='Genre' style={{padding: '10px', width: '20em'}} color="secondary"/>
+                            <TextField name='category' multiline onChange={handleEditInp} value={values.category} variant='outlined' label='Category' style={{padding: '10px', width: '20em'}} color="secondary"/>
                         </form>
                             <Link to='/' style={{ textDecoration: 'none' }}>
                                 <Button onClick={handleSave} variant='contained' color='warning'>Save</Button>                    

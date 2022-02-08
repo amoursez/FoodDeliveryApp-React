@@ -9,13 +9,10 @@ export default function AddProduct() {
     const navigate = useNavigate()
     const [values, setValues] = React.useState({
         name: '',
-        artist: '',
-        year: '',
         image: '',
         price: '',
         description: '',
-        tracklist: '',
-        genre: ''
+        category: ''
     })
 
     const customTheme = createTheme({
@@ -85,13 +82,13 @@ export default function AddProduct() {
                               justifyContent: 'center'
                           }}>
                           <TextField name='name' onChange={handleInp} value={values.name} multiline variant='outlined' label='Name' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                          <TextField name='artist' onChange={handleInp} value={values.artist} multiline variant='outlined' label='Artist' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                          <TextField name='year' onChange={handleInp} value={values.year} variant='outlined' label='Year' style={{padding: '10px', width: '20em'}} color="secondary"/>
+                         
+                         
                           <TextField name='image' onChange={handleInp} value={values.image} multiline variant='outlined' label='Image' style={{padding: '10px', width: '20em'}} color="secondary"/>
                           <TextField name='price' onChange={handleInp} value={values.price} variant='outlined' label='Price' style={{padding: '10px', width: '20em'}} color="secondary"/>
                           <TextField name='description' onChange={handleInp} value={values.description} multiline variant='outlined' label='Description' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                          <TextField name='tracklist' onChange={handleInp} value={values.tracklist} multiline variant='outlined' label='Tracklist' style={{padding: '10px', width: '20em'}} color="secondary"/>
-                          <TextField name='genre' onChange={handleInp} value={values.genre} variant='outlined' label='Genre' style={{padding: '10px', width: '20em'}} color="secondary"/>
+                         
+                          <TextField name='category' onChange={handleInp} value={values.category} variant='outlined' label='Category' style={{padding: '10px', width: '20em'}} color="secondary"/>
                       </form>
                       <Link to='/' style={{ textDecoration: 'none' }}>
                           <Button onClick={handleSave} variant='contained' color='warning'>Add</Button>

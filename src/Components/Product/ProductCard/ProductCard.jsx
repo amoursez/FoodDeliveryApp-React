@@ -76,12 +76,7 @@ export default function ProductCard({item}) {
                     <Typography gutterBottom variant="h6" component="div">
                     {item.name}
                     </Typography>
-                    <Typography gutterBottom variant="p" component="div" sx={{ fontWeight: 'bold'}}>
-                    {item.artist}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                    {item.year}
-                    </Typography>
+            
                 </CardContent>
                 <CardMedia
                     component="img"
