@@ -52,7 +52,7 @@ export default function AddComments() {
       }}
     >
         <Paper elevation={3}>
-            <h1 style={{textAlign:'center', color: 'darkblue'}}>Добавить отзыв</h1>
+           
             <div style={{display:'flex', justifyContent: 'space-around', color:'black'}}>
                 <div
                     style={{
@@ -75,7 +75,7 @@ export default function AddComments() {
                                 onChange={handleInp} 
                                 value={values.title} 
                                 variant='outlined' 
-                                label='Ваш отзыв' 
+                                label='Оставьте отзыв' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 

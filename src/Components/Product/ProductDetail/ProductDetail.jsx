@@ -54,7 +54,7 @@ const ProductDetail = () => {
            
 
             
-            
+            <Comments />
             
             </Paper> 
 

@@ -18,7 +18,7 @@ export default function CommentCard({ item }) {
       disableSpacing
       style={{ display: "flex", justifyContent: "right" }}
     >
-      {currentUser?.email === "admin@mail.ru" ? (
+      {currentUser?.email === "amoursez@gmail.com" ? (
         <>
           <CardActions disableSpacing>
             <IconButton onClick={() => deleteComment(item.id)}>
@@ -49,7 +49,7 @@ export default function CommentCard({ item }) {
           <p fontSize="18px">имя</p>
           <Typography
             marginBottom="7px"
-            variant="succsess"
+            variant="success"
             color="darkblue"
             fontSize="16px"
             // height="40px"

@@ -25,7 +25,7 @@ export default function CommentsList() {
 
   return (
     <>
-      <h1 style={{ textAlign: "center", color: "darkblue" }}>Добавить отзыв</h1>
+      <h1 style={{ textAlign: "center", color: "darkred" }}>Добавить отзыв</h1>
       <Box
         sx={{ flexGrow: 1, margin: 4, marginTop: 1 }}
         style={{ backgroundColor: "#ffff" }}

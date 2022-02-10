@@ -148,17 +148,17 @@
   "comments": [
     {
       "comment": "Вкусно",
-      "name": "Sezim",
+      "name": "СС",
       "date": "",
       "price": null,
-      "id": 1
+      "id": 3
     },
     {
       "comment": "Не вкусно",
-      "name": "Актан",
+      "name": "Ола",
       "date": "",
       "price": null,
-      "id": 2
+      "id": 4
     }
   ]
 }
