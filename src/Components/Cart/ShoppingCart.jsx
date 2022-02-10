@@ -7,9 +7,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { productContext } from '../Contexts/ProductsContext';
+import { productContext } from '../../Contexts/ProductsContext';
 import { Button, Link, Typography, createTheme, ThemeProvider } from '@mui/material';
-import { calcTotalPrice } from '../Helpers/CalcPrice';
+import { calcTotalPrice } from '../../Helpers/CalcPrice';
 import { useNavigate } from 'react-router-dom'
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -43,12 +43,15 @@ const customTheme = createTheme({
     warning: {
       main: "#f5b301",
       contrastText: "#3b3f46"
-
+    },
+    primary: {
+      main: "#F9003C",
+      contrastText: "#fff",
     }
   }
 });
 
-export default function Cart() {
+export default function ShoppingCart() {
     const { cart, getCart, changeProductCount } = React.useContext(productContext)
     const { deleteFromCart } = React.useContext(productContext)
     
@@ -79,9 +82,9 @@ export default function Cart() {
                       {cart.products.map((elem) => (
                           <StyledTableRow key={elem.item.id}>
                           <StyledTableCell component="th" scope="row">
-                              <img width='30px' src={elem.item.image} alt={elem.item.title} />
+                              <img width='60px'src={elem.item.image} alt={elem.item.title} />
                           </StyledTableCell>
-                          <StyledTableCell align="right">{elem.item.title}</StyledTableCell>
+                          <StyledTableCell align="right" fontWeight={700 }>{elem.item.name}</StyledTableCell>
                           <StyledTableCell align="right">{elem.item.price}</StyledTableCell>
                           <StyledTableCell align="right">
                               <input 
@@ -119,7 +122,7 @@ export default function Cart() {
               <TableRow>
                   <TableCell colSpan={3} align='right'>
                   <Link to='/payform' style={{textDecoration: 'none'}}>
-                      <Button variant='contained'  onClick={() => navigate('/payform')} color='warning'>Buy</Button>
+                      <Button variant='contained'  onClick={() => navigate('/payform')} color='primary'>Buy</Button>
                   </Link>
                   </TableCell>
               </TableRow>

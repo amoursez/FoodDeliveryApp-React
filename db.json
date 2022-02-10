@@ -1,32 +1,164 @@
 {
   "products": [
     {
-      "name": "Burger",
-      "artist": "",
-      "year": "",
-      "image": "https://media.istockphoto.com/photos/juicy-hamburger-on-white-background-picture-id1206323282?k=20&m=1206323282&s=612x612&w=0&h=yatlq6BHRCCvoTzFZLSwaJc0O8Quct_tRPWtH0dj9Fc=",
+      "name": "Chickenjoy Treat A",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/Chickenjoy-Bucket-Treat-A_600x.jpg?v=1635460036",
+      "price": 40,
+      "description": "6 Pc Chickenjoy Bucket served with gravy for dipping, a Burger Steak Family Pack and 3 Peach Mango Pies\n\n",
+      "category": "Family Bucket Meals",
+      "id": 4
+    },
+    {
+      "name": "Chickenjoy Treat B\n",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/Chickenjoy-Bucket-Treat-B_600x.jpg?v=1635460097",
+      "price": 100,
+      "description": "6 Pc Chickenjoy Bucket, Jolly Spaghetti Family Pack and 3 Peach Mango Pies\n\n",
+      "category": "Family Bucket Meals",
+      "id": 5
+    },
+    {
+      "name": "Chickenjoy Bucket Treat C",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/Chickenjoy-Bucket-Treat-C_600x.jpg?v=1635460148",
+      "price": 100,
+      "description": "6 Pc Chickenjoy Bucket served with gravy for dipping, Palabok Fiesta Family Pack and 3 Peach Mango Pies Note: Palabok sauce contains shrimp and pork that cannot be removed",
+      "category": "Family Bucket Meals",
+      "id": 6
+    },
+    {
+      "name": "10 Pc Chickenjoy Bucket",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/10-pc-chickenjoy-bucket_600x.jpg?v=1635459211",
+      "price": 20,
+      "description": "10 Pieces (5 legs, 5 thighs) of our signature crispy juicy bone-in fried chicken. Served with a side of gravy for dipping. Choose from regular and spicy.",
+      "category": "Fried Chicken",
+      "id": 7
+    },
+    {
+      "name": "2 Pc Chickenjoy w/ 1 Side\n",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/2-pc-one-side-chickenjoy_600x.jpg?v=1635459012",
+      "price": 15,
+      "description": "A drumstick and thigh of our signature Chickenjoy fried chicken served with 1 side. Served with a side of gravy for dipping. Choose from regular and spicy.",
+      "category": "Fried Chicken",
+      "id": 8
+    },
+    {
+      "name": "2 Pc Chickenjoy w/ 2 Sides",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/2-pc-chickenjoy_2-sides_76f0e829-6f66-4eab-9ce8-8e2d402d9026_600x.jpg?v=1635457958",
+      "price": 40,
+      "description": "A drumstick and thigh of our signature Chickenjoy fried chicken served with 2 sides. Served with a side of gravy for dipping. Choose from regular and spicy.\n\n",
+      "category": "Fried ChIcken",
+      "id": 9
+    },
+    {
+      "name": "1 Pc Chickenjoy w/ Jolly Spaghetti",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/1PcChickenjoy_Spaghetti_600x.jpg?v=1635459465",
       "price": 30,
-      "description": "Blablabla",
-      "tracklist": "",
-      "genre": "",
-      "category": "2",
+      "description": "A  Chickenjoy fried chicken drumstick served with Jolly Spaghetti. Served with a side of gravy for dipping.",
+      "category": "Fried Chicken",
+      "id": 10
+    },
+    {
+      "name": "Jolly Spaghetti",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/JollySpaghetti_600x480px_600x.jpg?v=1632360978",
+      "price": 30,
+      "description": "Our unique spaghetti topped with Jollibee’s signature sweet-style sauce, loaded with chunky slices of savory ham, ground meat, and hotdog.\n\n",
+      "category": "Spaghetti and Fiesta",
+      "id": 11
+    },
+    {
+      "name": "Palabok Fiesta",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/PalabokFiesta_600x480px_600x.jpg?v=1632361144",
+      "price": 55,
+      "description": "A traditional Filipino noodle dish covered in garlic sauce, sauteed pork, shrimp, and egg. Note: Palabok sauce contains shrimp and pork that cannot be removed",
+      "category": "Spaghetti and Fiesta",
+      "id": 12
+    },
+    {
+      "name": "Palabok Fiesta Family Pack",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/PalabokFiestaFamilyPack_600x480px_600x.jpg?v=1632361205",
+      "price": 100,
+      "description": "A Family Pack of our signature Palabok Fiesta noodles. Serves 3-5. Note: Palabok sauce contains shrimp and pork that cannot be removed",
+      "category": "Spaghetti and Fiesta",
+      "id": 13
+    },
+    {
+      "name": "Big Yumburger",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/big-yumburger_600x.jpg?v=1628626248",
+      "price": 80,
+      "description": "A double patty langhap-sarap Yumburger (which taste as good as they smell) with our signature dressing, lettuce, tomato and cheese on a fresh bun.\n\n",
+      "category": "Burgers",
+      "id": 14
+    },
+    {
+      "name": "Aloha Yumburger",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/aloha-yumburger_600x.jpg?v=1628626212",
+      "price": 100,
+      "description": "A double patty langhap-sarap Yumburger (which taste as good as they smell) with a pineapple ring, bacon, aloha dressing, and lettuce on a fresh bun.\n\n",
+      "category": "Burgers",
+      "id": 15
+    },
+    {
+      "name": "Kids Meal: 2 pc Chicken Tenders with Rice and Drink\n",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/kids-meal-2pc-tenders-rice-drink_600x.jpg?v=1628625920",
+      "price": 30,
+      "description": "A kids meal with 2 chicken tenders, a side of rice and gravy, a drink and a toy when offered",
+      "category": "Sides and Kids Meals",
+      "id": 16
+    },
+    {
+      "name": "Kids Meal: Cheesy Yumburger, Small Fries and Drink\n",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/kids-meal-cheesy-yumburger-fries-drink_600x.jpg?v=1628625979",
+      "price": 35,
+      "description": "A kids meal with a Cheesy Yumburger, a small fries, a drink and a toy when offered\n\n",
+      "category": "Sides and Kids Meals",
+      "id": 17
+    },
+    {
+      "name": "Deluxe Chicken Sandwich",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/Deluxe-Chicken-Sandwich_600x.jpg?v=1635460667",
+      "price": 40,
+      "description": "Our Deluxe Chicken Sandwich starts with a crispy juicy hand-breaded chicken breast fillet, spread with umami mayo, topped with fresh sliced tomato and crisp lettuce, served on a toasted brioche bun\n\n",
+      "category": "Chicken Sandwiches",
+      "id": 18
+    },
+    {
+      "name": "Peach Mango Pie",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/peach-mango-pie_1080x.jpg?v=1628089792\n\n",
+      "price": 10,
+      "description": "Sweet and flaky Peach Mango Pie made with real Philippine mangoes\n\n",
+      "category": "Drinks and Desserts",
+      "id": 19
+    },
+    {
+      "name": "Pineapple Quencher\n",
+      "image": "https://cdn.shopify.com/s/files/1/0580/3245/5858/products/pineapple-quencher_1080x.jpg?v=1628089828",
+      "price": 5,
+      "description": "A sweet taste of the Philippines with our signature Pineapple Quencher juice drink",
+      "category": "Drinks and Desserts",
+      "id": 20
+    },
+    {
+      "name": "mkdsc",
+      "image": "dmejk",
+      "price": 90,
+      "description": "OPP",
+      "category": "Burgers",
+      "id": 21
+    }
+  ],
+  "comments": [
+    {
+      "comment": "Вкусно",
+      "name": "Sezim",
+      "date": "",
+      "price": null,
       "id": 1
     },
     {
-      "name": "bURGER 2",
-      "image": "https://www.seriouseats.com/thmb/ON5cp8ZmQYYuKru9VMuXEZAJL5I=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__07__20150702-sous-vide-hamburger-anova-primary-bf5eefff4505446f9cbf33f5f2d9b2e6.jpg",
-      "price": 200,
-      "description": "FKFKF",
-      "category": "fast food",
-      "id": 2
-    },
-    {
-      "name": "dje",
-      "image": "dejnd",
+      "comment": "Не вкусно",
+      "name": "Актан",
+      "date": "",
       "price": null,
-      "description": "jednwj",
-      "category": "dejwndw",
-      "id": 3
+      "id": 2
     }
   ]
 }

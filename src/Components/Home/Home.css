@@ -1,0 +1,215 @@
+.body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+  
+}
+
+h1, h2, h3, h4, h5, h6,p ,input {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+.buttons {
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    align-items: center;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 136, 0, 0.068); 
+    padding: 15px 35px;
+    border-radius: 26px;
+    max-width: 230px;
+    cursor: pointer;
+    color:#F9003C;
+    font-weight: 800;
+}
+
+
+
+/* Intro */
+.intro {
+    background-image: url(https://image.freepik.com/free-vector/abstract-orange-gradient-background_39405-9.jpg) ;
+}
+.intro__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+.intro__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 60px;
+}
+.intro__title {
+    font-family: 'Montserrat', sans-serif;
+
+    text-transform: uppercase;
+    color: white;
+    font-size: 72px;
+    font-weight:bold;
+}
+.intro__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+.intro__img {
+    max-width: 100%;  
+    width: 538px;
+}
+
+/* Subscribe */
+.sub{
+    background-image: url(https://image.freepik.com/free-vector/abstract-orange-gradient-background_39405-9.jpg);
+}
+.sub__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.sub__left {
+    display: flex;
+    flex-direction: column;
+    align-content:space-between;
+}
+.sub__title {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.sub__text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.sub__input{
+    display: flex;
+    margin-top: 10px;
+}
+.sub__input button{
+    margin-left: 10px;
+}
+.sub__input input{
+    padding: 12px 20px;
+    background-color: white;
+    border: 0;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 6px;
+}
+.sub__right-title {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* About */
+.about{
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 80px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.about__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.about__right img {
+    max-width: 100%;
+    margin: 5%;
+    border-radius: 103px;
+    box-shadow:  0px -10px 0 0 #faf9fb;;
+
+}
+.about__title {
+    font-family: 'Montserrat', sans-serif;
+    max-width:500px;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 900;
+    padding: 10px;
+}
+.about__text {
+    max-width: 430px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .intro__title {
+    
+        font-size: 60px !important;
+        font-weight:bold;
+        width: 100%;
+        padding: 5% 10%;
+    }
+    .intro__text{
+        padding: 5% 10%;
+    }
+    .buttons{
+       margin: 5% 10%;
+    }
+    .about__inner{
+        margin: 0;
+        width: 100%;
+        padding:0 ;
+    }
+    .about__right img{
+        width: 70%;
+    }
+    .sub__inner{
+       display: none;
+    }
+
+
+    
+   
+}
+
+
+@media screen and (max-width: 768px) {
+    .about__inner{
+        padding: 10px 0;
+    }
+    .intro__img {
+        display: none;
+        width: 470px !important;
+        height: 501px !important;
+   
+    }
+    .intro__left 
+    {
+     font-size: 45px;
+    }
+   
+    .container {
+        width: 100%;
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+    .intro__inner{
+        padding-left: 8%;
+       
+    }
+    .intro__title{
+        width: 100%;
+    }
+    
+}

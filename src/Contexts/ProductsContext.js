@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
-import { API } from '../Helpers/Constants'
+import { API, API2 } from '../Helpers/Constants'
 import { calcSubPrice, calcTotalPrice } from '../Helpers/CalcPrice';
 import { auth } from '../Firebase';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
@@ -48,9 +48,15 @@ const reducer = (state = INIT_STATE, action) => {
         case 'GET_FAVORITES':
             return {
                 ...state, favorites: action.payload
-            };       
-        default: 
-            return state    
+            };     
+        case "GET_COMMENTS":
+            return {
+                    ...state, comments: action.payload
+                }
+        case "GET_EDIT_COMMENTS":
+            return {...state, edit: action.payload}
+            default: return state
+          
     }
 } 
 
@@ -343,16 +349,47 @@ const ProductsContextProvider = ({ children }) => {
 
         return currentUser
     }
-
+   
     function logout(){
         return signOut(auth)
     }
+   
 
+  const addComment = async (newComment) => {
+    console.log(newComment, "wow");
+    try {
+      let res = await axios.post(API2, newComment);
+      getComments();
+      return res;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  const deleteComment = async (id) => {
+    await axios.delete(`${API2}/${id}`);
+    getComments();
+  };
+  
+  const getComments = async () => {
+    try {
+      let res = await axios(`${API2}`);
+      let action = {
+        type: "GET_COMMENTS",
+        payload: res.data,
+      };
+      dispatch(action);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+   
     return (
         
         <productContext.Provider value={{
             products: state.products,
+            comments: state.comments,
             edit: state.edit,
             paginatedPages: state.paginatedPages,
             detail: state.detail,
@@ -360,6 +397,7 @@ const ProductsContextProvider = ({ children }) => {
             cartLength: state.cartLength,
             favorites: state.favorites,
             favoritesLength: state.favoritesLength,
+
             addProduct,
             getProducts,
             editProduct,
@@ -376,11 +414,15 @@ const ProductsContextProvider = ({ children }) => {
             signIn,
             useAuth,
             logout,
+            addComment, 
+            getComments,
+            deleteComment,
             addProductInFavorites,
             getFavoritesLength,
             checkProductInFavorites,
             getFavorites,
-            deleteFromFavorites
+            deleteFromFavorites,
+          
         }}>
             {children}
         </productContext.Provider>

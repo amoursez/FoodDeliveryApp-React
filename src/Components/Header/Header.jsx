@@ -1,35 +1,4 @@
-/* import { BarChart, SearchRounded, ShoppingCartRounded } from '@mui/icons-material';
-import React from 'react';
-import logo from '../../Assets/logo1.png'
 
-const Header = () => {
-    return (
-        <header>
-         <img src={logo} alt="logo" className='logo'/>
-         <div className="inputBox">
-             <SearchRounded className="searchIcon"/>
-             <input type="text" placeholder="Search"></input>
-             </div>  
-            <div className='shoppingCart'>
-                <ShoppingCartRounded className='cart'/>
-                <div className='cart_content'>
-                    <p>2</p>
-                </div>
-                </div> 
-                <div className = "profileContainer">
-                    <div className='imgBox'>
-                        <img src="https://thumbs.dreamstime.com/b/icon-social-profile-over-orange-iconic-image-networks-anonymous-very-personal-character-148258708.jpg" alt=""/>
-                    </div>
-                  <h2 className='userName'>Sezim Ydyrysova</h2>
-                </div>
-                <div className='toggleMenu'>
-                    <BarChart className="toggleIcon" />
-                </div>
-        </header>
-    );
-};
-
-export default Header; */
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -78,8 +47,8 @@ const Search = styled('div')(({ theme }) => ({
 const customTheme = createTheme({
     palette: {
       secondary: {
-        main: "#1e2328",
-        contrastText: "#ffff"
+        main: "#fff",
+        contrastText: "#000"
       },
       warning: {
         main: "#f5b301",
@@ -101,16 +70,17 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
+  
     [theme.breakpoints.up('md')]: {
       width: '20ch',
     },
@@ -137,10 +107,7 @@ export default function MyNavbar() {
       })
   }, [searchVal])
 
-  // console.log(searchVal)
   const handleValue = (e) => {
-    // const search = new URLSearchParams(window.location.search)
-    // search.set('q', e.target.value)
     setSearchVal(e.target.value)
     setSearchParams({
         'q': searchVal,
@@ -200,7 +167,7 @@ export default function MyNavbar() {
           <MenuItem sx={{color: '#1e2328'}}>Register</MenuItem>
         </Link>
       </Menu>
-      
+     
   )
 
   
@@ -222,24 +189,10 @@ export default function MyNavbar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-      <Link to='/products' style={{ textDecoration: 'none', color:'inherit' }} >
-          <Button variant="text" color='inherit' className='menubar'>Products</Button>
-          </Link>
-      </MenuItem>
-      <MenuItem>
-          <Link to='/about' style={{ textDecoration: 'none', color:'Background' }}>
-            <Button variant="text" color='inherit' className='menubar'>About Us</Button>
-          </Link>
-      </MenuItem>
-      <MenuItem>
-          <Link to='/contacts' style={{ textDecoration: 'none', color:'inherit' }}>
-            <Button variant="text" color='inherit' className='menubar'>Contacts</Button>
-          </Link>
-      </MenuItem>
+    
       <MenuItem>
       {currentUser ? (
-          <Link to='/cart' style={{color: 'inherit', textDecoration: 'none'}}>
+          <Link to='/cart' style={{color: 'warning', textDecoration: 'none'}}>
             <IconButton color='inherit' size="small">
                 <Badge>
                     <ShoppingCartIcon/><p>Cart</p>
@@ -249,10 +202,11 @@ export default function MyNavbar() {
           </Link>
           ) : (null)}
       </MenuItem>
+      
       <MenuItem>
       {currentUser ? (
-          <Link to='/favorites' style={{color: 'inherit', textDecoration: 'none'}}>
-            <IconButton aria-label="fav" color="inherit" size="small">
+          <Link to='/favorites' style={{color: 'warning', textDecoration: 'none'}}>
+            <IconButton aria-label="fav" color="primary" size="small">
                 <FavoriteIcon />
                 <p>Favorite</p>
             </IconButton>
@@ -265,7 +219,7 @@ export default function MyNavbar() {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="inherit"
+          color="primary" 
         >
           <AccountCircle />
         </IconButton>
@@ -301,7 +255,7 @@ export default function MyNavbar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            <Link to='/'>
+            <Link to='/products'>
                  <Box
         component="img"
         sx={{
@@ -324,22 +278,12 @@ export default function MyNavbar() {
               onChange={handleValue}
             />
           </Search>
-          <Box sx={{ flexGrow: 1}} className='menubar'>
-          <Link to='/products' style={{ textDecoration: 'none' }}>
-          <Button variant="text" color='primary' className='menubar'>Products</Button>
-          </Link>
-          <Link to='/about' style={{ textDecoration: 'none' }}>
-            <Button variant="text" color='primary' className='menubar'>About Us</Button>
-          </Link>
-          <Link to='/contacts' style={{ textDecoration: 'none' }}>
-            <Button variant="text" color='primary' className='menubar'>Contacts</Button>
-          </Link>
-          </Box>
+          
 
           <Box sx={{ flexGrow: 1 }} />
           
 
-          {currentUser?.email === 'sinatra@admin.com' ? (
+          {currentUser?.email === 'amoursez@gmail.com' ? (
                 <Link to='/add' style={{ textDecoration: 'none', marginRight: 8 }}>
                   <Button variant='contained' color={'warning'}>Add</Button>
                 </Link>

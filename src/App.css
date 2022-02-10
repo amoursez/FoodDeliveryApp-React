@@ -3,121 +3,11 @@
   height: 100vh;
   background-color: #faf9fb;
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  
 }
 .App::-webkit-scrollbar{
   display: none;
-}
-
-/* header */
-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 15px; 
-  height: 60px;
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 101;
-  box-shadow: 0px 3px 20px rgba(0,0,0,0.1);
-}
-
-.logo{
-  min-width: 40px;
-  width: 50px;
-}
-
-.inputBox{
-  background: #FFF;
-  border-radius: 25px;
-  box-shadow: 0px 3px 20px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 8px 15px;
-  width: 120px;
-}
-.inputBox .searchIcon{
-  color: #787a84;
-  font-size: 20px;
-
-}
-.inputBox input{
-  width: 100% ;
-  height: 100%;
-  outline: none;
-  border:none;
-  background: transparent;
-  color:  #787a84;
-  padding-left: 8px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.shoppingCart{
-  position: relative;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.shoppingCart .cart{
-  font-size: 30px;
-  color:#787a84;
-}
-.shoppingCart .cart_content{
-  width: 20px;
-  height: 20px;
-  background: #f8901c;
-  border-radius: 100%;
-  min-width: 20px;
-  min-height: 20px;
-  position: absolute;
-  top: -8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.shoppingCart .cart_content p{
-  font-weight: 500;
-  color:#faf9fb
-}
-.profileContainer{
-  display: flex;
-  align-items: center;
-}
-
-.profileContainer .imgBox{
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  border-radius: 100vw;
-  background-color: #444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.profileContainer .imgBox .profilePic{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.toggleMenu{
-  transform: rotate(90deg);
-}
-
-.toggleMenu.toggleIcon{
-  color: #373848;
-  font-size: 30px;
-}
-.profileContainer .userName{
-  font-size: 16px;
-  margin-left: 8px;
-  font-weight: 500;
-  display: none;
-  align-items: center;
 }
 
 
@@ -358,4 +248,78 @@ main{
 .subMenuContainer .viewAll i .MuiSvgIcon-root{
   font-size: 16px;
   color:#faf9fb;
+}
+
+
+.css-1t29gy6-MuiToolbar-root{
+  width: 100%;
+}
+.css-1kcggdq-MuiInputBase-root .MuiInputBase-input{
+  border-radius: 25px;
+  box-shadow: 0px 3px 20px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 8px 15px;
+  width: 50ch;
+}
+
+
+.css-1guk29{
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  object-fit: cover;
+}
+/* logo */
+.css-jkg241 {
+  height: 175px !important;
+  width: 174px!important;
+  padding: 0;
+  padding-bottom: -30px !important;
+}
+/* header */
+.css-1mbgi29-MuiPaper-root-MuiAppBar-root{
+  display: flex !important;
+  align-items: center!important;
+  justify-content: space-between!important;
+  height: 60px!important;
+  width: 100%!important;
+  background-color: white!important;
+  position: fixed!important;
+  top: 0!important;
+  left: 0!important;
+  z-index: 101!important;
+  box-shadow: 0px 3px 20px rgba(0,0,0,0.1)!important;
+}
+/* favorites */
+.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
+  color:#F9003C !important;
+}
+/* cart */
+.css-zylse7-MuiButtonBase-root-MuiIconButton-root {
+  color: black !important;
+}  
+/* profile */
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
+  color:#F9003C !important;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
+  color:#F9003C !important;
+}
+.css-8bjq0v-MuiButtonBase-root-MuiButton-root {
+  background-color:#F9003C !important;
+}
+.css-1dym4ij-MuiButtonBase-root-MuiButton-root{
+  color: #000 !important;
+}
+
+.css-1l0fxt-MuiButtonBase-root-MuiButton-root{
+  background-color:#F9003C !important;
+  color: white !important;
 }

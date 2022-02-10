@@ -26,6 +26,7 @@ const BottomMenu = () => {
         <MenuContainer link={"#"} icon = {<Favorite />} />  
         <MenuContainer link={"#"} icon = {<SummarizeRounded/>} />  
         <MenuContainer link={"#"} icon = {<Settings />} />  
+  
         <div className='indicator'></div>
 
         </ul>

@@ -1,0 +1,39 @@
+/* @media screen and (max-width: 425px) {
+    .css-8v0fa4-MuiGrid-root{
+   max-width: 100% !important;
+    flex-basis: 100 !important;
+    display: -webkit-flex !important;
+}
+} */
+
+@media screen and (max-width: 376px) {
+    .MuiGrid-card {
+      width: 100%!important;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .popup{
+        display: none !important;
+    }
+  }
+  @media screen and (max-width: 706px) {
+    .MuiGrid-card {
+      width: 100% !important;
+
+    }
+    .MuiGrid-container{
+        display: block!important;
+        
+    }
+    .css-8v0fa4-MuiGrid-root{
+        max-width: 100%!important;
+
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .css-1lvztma-MuiButtonBase-root-MuiButton-root {
+        display: none !important;
+    }
+}

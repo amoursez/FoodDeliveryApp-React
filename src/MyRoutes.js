@@ -10,24 +10,35 @@ import ProductDetail from './Components/Product/ProductDetail/ProductDetail';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 import Favorites from './Components/Favorites/FavoritesList';
-import Cart from './Cart/ShoppingCart';
+import ShoppingCart from './Components/Cart/ShoppingCart';
+import Checkout from './Components/PayForm/Checkout';
+import Comments from './Components/Comments/Comments';
+import Home from './Components/Home/Home';
+import Footer from './Components/Footer/Footer';
+import MainPage from './Components/Home/MainPage';
 
 const MyRoutes = () => {
     return (
         <ProductsContextProvider>
             <BrowserRouter>
                 <Header/>
-                <BottomMenu/>
+                {/* <BottomMenu/> */}
                 <Routes>
                 <Route path ='/add' element={<AddProduct />}/>
-                <Route path='/' element={<Products />}/>
+                <Route path='/products' element={<Products/>}/>
                 <Route path ='/edit/:id' element={<EditProduct/>}/>
                 <Route path='/detail/:id' element={<ProductDetail/>} />
                 <Route path='/register' element={<Register />} />
                 <Route path='/login' element={<Login />} /> 
+                <Route path='/' element={<MainPage />} /> 
                 <Route path='/favorites' element={<Favorites/>} />
-                <Route path='/cart' element={<Cart/>} />
+                <Route path='/cart' element={<ShoppingCart/>} />
+                <Route path='/payform' element={<Checkout/>}  />
+                <Route path='/home'  element={<Home/>}  />
+                <Route path='/comments'  element={<Comments/>}  />
+                <Route path='/payform'  element={<Checkout/>}  />
                 </Routes>
+                <Footer />
             </BrowserRouter>
         </ProductsContextProvider>
     );

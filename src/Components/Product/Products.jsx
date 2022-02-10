@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-/* import Sidebar from '../Home/Sidebar/Sidebar'; */
+import Sidebar from '../../Components/Sidebar/Sidebar';
 import ProductList from './ProductList/ProductList';
 
 const Products = () => {
@@ -8,7 +8,7 @@ const Products = () => {
         <div>
            <Grid sx={{display: 'flex'}}>
                 <Grid item md={3}>
-           {/*      <Sidebar/> */}
+                <Sidebar/>
             </Grid>
             <Grid item md={9}>
                 <ProductList/>

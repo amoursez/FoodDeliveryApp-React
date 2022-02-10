@@ -73,7 +73,7 @@ export default function ProductCard({item}) {
         <Card sx={{ maxWidth: 700 }}>
             <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
                 <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
+                    <Typography gutterBottom variant="h6" component="div" fontWeight={'bold'} fontFamily={'Montserrat'}>
                     {item.name}
                     </Typography>
             
@@ -82,13 +82,14 @@ export default function ProductCard({item}) {
                     component="img"
                     alt="item image"
                     height="300"
+                  
                     image={item.image}
                     className='cardImg'
                 />
             </Link>
 
         <CardContent>
-            <Typography size="small">$ {item.price}</Typography>
+            <Typography size="small" fontFamily={'Montserrat'}>$ {item.price}</Typography>
         </CardContent>
         {icons}
         </Card>
